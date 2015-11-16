@@ -1,4 +1,5 @@
 package com.gorulia.android.runcrmrun.adapter;
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,12 +12,12 @@ import com.gorulia.android.runcrmrun.R;
 
 import java.util.List;
 
-public class LazyAdapterListResult extends ArrayAdapter<String> {
-    private List<ObjectItemListResult> data;
+public class LazyAdapterOneResult  extends ArrayAdapter<String> {
+    private  List<ObjectItemListResult> data;
     private Context context;
 
-    public LazyAdapterListResult(Context context, List<ObjectItemListResult> data) {
-        super(context, R.layout.listview_listresult);
+    public LazyAdapterOneResult(Context context,  List<ObjectItemListResult> data) {
+        super(context, R.layout.listview_oneresult);
         this.data = data;
         this.context = context;
     }
@@ -38,10 +39,10 @@ public class LazyAdapterListResult extends ArrayAdapter<String> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View view = inflater.inflate(R.layout.listview_listresult, parent, false);
+        View view = inflater.inflate(R.layout.listview_oneresult, parent, false);
         TextView primary_field = (TextView)view.findViewById(R.id.primary_field);
         TextView secondary_field = (TextView)view.findViewById(R.id.secondary_field);
-        ObjectItemListResult objectItem = data.get(position);
+        ObjectItemListResult objectItem = data.get(0);
         // устанавливаем значения компонентам одного эелемента списка
         primary_field.setText(objectItem.getPrimary_field());
         secondary_field.setText(objectItem.getSecondary_field());

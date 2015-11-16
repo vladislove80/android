@@ -1,4 +1,4 @@
-package com.gorulia.android.runcrmrun.POJO;
+package com.gorulia.android.runcrmrun.pojo;
 
 public class ObjectItemListResult {
     private String primary_field;

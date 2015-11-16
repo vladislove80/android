@@ -1,10 +1,14 @@
-package com.gorulia.android.runcrmrun;
+package com.gorulia.android.runcrmrun.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.gorulia.android.runcrmrun.POJO.ObjectItemListResult;
+import com.gorulia.android.runcrmrun.pojo.ObjectItemListResult;
+import com.gorulia.android.runcrmrun.R;
 import com.gorulia.android.runcrmrun.adapter.LazyAdapterListResult;
 import com.gorulia.android.runcrmrun.realm.SourceListResultModelRealm;
 import com.gorulia.android.runcrmrun.realm.SourceResultModelRealm;
@@ -25,6 +29,18 @@ public class ActivityListResult extends AppCompatActivity {
         listView = (ListView) findViewById(R.id.listResult2);
         adapter = new LazyAdapterListResult(this, initData());
         listView.setAdapter(adapter);
+
+        // По клику будем выводить текст элемента
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                    Intent intent = new Intent(getApplicationContext(), ActivityOneResult.class);
+                intent.putExtra("position", position);
+                startActivity(intent);
+
+            }
+        });
     }
     private ArrayList<ObjectItemListResult> initData() {
         ArrayList<ObjectItemListResult> maps = new ArrayList<>();

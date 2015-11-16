@@ -1,8 +1,7 @@
-package com.gorulia.android.runcrmrun.POJO;
+package com.gorulia.android.runcrmrun.pojo;
 
 import com.google.gson.annotations.SerializedName;
 
-import java.sql.Timestamp;
 import java.util.HashMap;
 import java.util.LinkedList;
 

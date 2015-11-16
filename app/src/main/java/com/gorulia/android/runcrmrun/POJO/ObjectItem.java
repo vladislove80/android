@@ -1,4 +1,4 @@
-package com.gorulia.android.runcrmrun.POJO;
+package com.gorulia.android.runcrmrun.pojo;
 
 import java.util.Date;
 

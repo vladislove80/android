@@ -7,7 +7,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.gorulia.android.runcrmrun.POJO.ObjectItem;
+import com.gorulia.android.runcrmrun.pojo.ObjectItem;
 import com.gorulia.android.runcrmrun.R;
 import com.squareup.picasso.Picasso;
 

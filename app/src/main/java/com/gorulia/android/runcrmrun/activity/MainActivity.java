@@ -1,6 +1,8 @@
-package com.gorulia.android.runcrmrun;
-import com.gorulia.android.runcrmrun.POJO.ObjectItem;
-import com.gorulia.android.runcrmrun.POJO.SourceModel;
+package com.gorulia.android.runcrmrun.activity;
+import com.gorulia.android.runcrmrun.pojo.ObjectItem;
+import com.gorulia.android.runcrmrun.pojo.SourceModel;
+import com.gorulia.android.runcrmrun.R;
+import com.gorulia.android.runcrmrun.SourceService;
 import com.gorulia.android.runcrmrun.adapter.LazyAdapter;
 import com.gorulia.android.runcrmrun.realm.SourceListResultModelRealm;
 import com.gorulia.android.runcrmrun.realm.SourceModelRealm;
@@ -138,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
         obj.setCountResult(response.body().get(0).getResults().size());
         obj.setIcon(response.body().get(0).getIcon());
         obj.setPrimary_field(response.body().get(0).getResults_layout_config().get("primary_field"));
-        obj.setSecondary_field(response.body().get(0).getResults_layout_config().get("primary_field"));
+        obj.setSecondary_field(response.body().get(0).getResults_layout_config().get("secondary_field"));
         return obj;
     }
 

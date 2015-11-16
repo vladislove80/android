@@ -1,6 +1,6 @@
 package com.gorulia.android.runcrmrun;
 
-import com.gorulia.android.runcrmrun.POJO.SourceModel;
+import com.gorulia.android.runcrmrun.pojo.SourceModel;
 
 import java.util.List;
 
